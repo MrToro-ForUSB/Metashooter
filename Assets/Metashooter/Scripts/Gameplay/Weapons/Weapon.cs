@@ -3,17 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using Sirenix.OdinInspector;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class Weapon : MonoBehaviour
 {
     // ———————— fields ————————
 
-    [TitleGroup("Weapon Stats")]
     public bool canShoot = true;
     public float shootRecoveryTime = 0.5f;
-    [SerializeField, PreviewField, BoxGroup] GameObject shot;
+    [SerializeField] GameObject shot;
     [SerializeField] Transform muzzleTransform;
 
     public XRBaseController Controller { get; private set; }
